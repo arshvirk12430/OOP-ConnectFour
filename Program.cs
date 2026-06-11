@@ -74,6 +74,58 @@
             return int.Parse(Console.ReadLine());
         }
     }
+
+
+    class Gamemanager
+    {
+        Board board = new Board();
+        Player p1;
+        Player p2;
+        Player current;
+
+        public void Start()
+        {
+            p1 = new HumanPlayer("Player 1", 'X');
+            p2 = new HumanPlayer("Player 2", 'O');
+            current = p1;
+
+            while (true)
+            {
+                board.PrintBoard();
+
+                int move = current.GetMove();
+
+                if (move < 0 || move > 6 || board.IsColumnFull(move))
+                {
+                    Console.WriteLine("Invalid move. Try again.");
+                    continue;
+                }
+
+                board.DropPiece(move, current.Symbol);
+
+                if (CheckWin(current.Symbol))
+                {
+                    board.PrintBoard();
+                    Console.WriteLine(current.Name + " wins!");
+                    break;
+                }
+
+                SwitchPlayer();
+            }
+        }
+
+        void SwitchPlayer()
+        {
+            current = (current == p1) ? p2 : p1;
+        }
+
+        bool CheckWin(char symbol)
+        {
+            // (simplified check - you can expand later)
+            return false;
+        }
+    }
+
     internal class Program
     {
         static void Main(string[] args)

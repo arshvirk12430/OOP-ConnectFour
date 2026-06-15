@@ -130,7 +130,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+           Gamemanager game = new Gamemanager();
+    game.Start();
         }
     }
 }

@@ -131,7 +131,7 @@
         static void Main(string[] args)
         {
            Gamemanager game = new Gamemanager();
-    game.Start();
+        game.Start();
         }
     }
 }

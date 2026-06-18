@@ -100,10 +100,36 @@
         }
          
         public override int GetMove()
-        {
-            Console.Write("Choose column (1-7): ");
-            return int.Parse(Console.ReadLine());
-        }
+
+ {
+
+     while (true)
+
+     {
+
+         Console.Write("Choose column (1-7): ");
+
+
+         string input = Console.ReadLine();
+
+
+         int move;
+
+
+         if (int.TryParse(input, out move))
+
+         {
+
+             return move - 1;
+
+         }
+
+
+         Console.WriteLine("Please enter a number.");
+
+     }
+
+ }
     }
 
 

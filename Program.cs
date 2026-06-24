@@ -181,7 +181,7 @@ namespace OOP_ConnectFour
                 if (CheckWin(current.Symbol))
                 {
                     board.PrintBoard();
-                    Console.WriteLine(current.Name + " wins!");
+                    Console.WriteLine(current.Name + " wins!" + " It is connect Four.";
                     break;
                 }
 

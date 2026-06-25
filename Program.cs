@@ -3,7 +3,7 @@ namespace OOP_ConnectFour
 
 
     using System;
-
+// This class manages the Connect Four board
     class Board
     {
         private char[,] grid = new char[6, 7];

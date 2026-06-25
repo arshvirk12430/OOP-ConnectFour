@@ -32,7 +32,8 @@ public void PrintBoard()
             Console.WriteLine("1 2 3 4 5 6 7");
         }
 
-        public bool DropPiece(int col, char symbol)
+       // Drops piece into selected column
+public bool DropPiece(int col, char symbol)
         {
             for (int r = 5; r >= 0; r--)
             {
@@ -45,7 +46,8 @@ public void PrintBoard()
             return false; // column full
         }
 
-        public bool IsColumnFull(int col)
+       // Checks if column is full
+public bool IsColumnFull(int col)
         {
             return grid[0, col] != '.';
         }

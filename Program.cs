@@ -8,14 +8,18 @@ namespace OOP_ConnectFour
     {
         private char[,] grid = new char[6, 7];
 
-        public Board()
+       // Creates empty board with dots
+public Board()
+
         {
             for (int r = 0; r < 6; r++)
                 for (int c = 0; c < 7; c++)
                     grid[r, c] = '.';
         }
 
-        public void PrintBoard()
+        // Prints the board on screen
+public void PrintBoard()
+
         {
             for (int r = 0; r < 6; r++)
             {
